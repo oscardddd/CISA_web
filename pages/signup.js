@@ -12,11 +12,16 @@ export default function signup(){
     const [password, setPassword] = useState("")
     const [error, setError] = useState("")
 
-    const signup = (e)=>{
+    const signup = async(e)=>{
         e.preventDefault()
         if(!cname ||!fname ||!lname ||!email ||!password){
             console.log("All fields are required")
-            return
+           
+        }
+        else{
+            let res = await fetch('http://localhost:4000/user/test')
+            let data = await res.json()
+            console.log(data)
         }
         console.log(cname,fname,lname,email,password)
     }
