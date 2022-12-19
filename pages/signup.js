@@ -1,10 +1,10 @@
-import { useId, useState } from "react";
+import { useState } from "react";
 import Link from 'next/link'
 import { Input, Button} from "antd";
 import styles from "./login.module.css"
 
 
-export default function signup(){
+export default function Signup(){
     const [cname, setCName] = useState("")
     const [fname, setFName] = useState("")
     const [lname, setLName] = useState("")
